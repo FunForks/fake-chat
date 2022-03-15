@@ -1,0 +1,21 @@
+
+
+
+
+  const addMessage = ({ senderId, recipientId, body }) => {
+    const sender = getUserById(senderId)
+    const recipient = getUserById(recipientId)
+    const error = !sender || !recipient
+
+    if (!sender) {
+      console.log("Unknown sender id:", senderId)
+    }
+    if (!recipient) {
+      console.log("Unknown sender id:", recipientId)
+    }
+    if (error) {
+      return "ERROR: see console log for details"
+    }
+
+
+  }
